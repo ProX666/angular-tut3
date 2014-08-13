@@ -7,3 +7,19 @@
 </div>
 
 <div ui-view></div>
+
+<my-widget title="This is a Outer Widget">
+    And this is the content of this Widget
+    <my-widget title="Inner Widget">
+        This now is the content of my inner widget ...
+    </my-widget>
+</my-widget>
+
+<div ng-controller="SumCtrl">
+    Current value: {{ someData.sum }}
+    <br />
+    <input type="text" class="form-control" placeholder="Number input" ng-model="usernmbr">
+    <br />
+    <button type="button" class="btn btn-primary" ng-click="increment(usernmbr)">increment by {{usernmbr}}</button>
+</div>
+
